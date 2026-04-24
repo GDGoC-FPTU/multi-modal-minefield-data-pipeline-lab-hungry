@@ -1,0 +1,1321 @@
+{
+  "metadata": {
+    "pipeline_timestamp": "2026-04-24T11:02:26.830149Z",
+    "total_processing_time_ms": 654,
+    "processing_stats": {
+      "csv": {
+        "status": "success",
+        "duration_ms": 54,
+        "documents_count": 21
+      },
+      "html": {
+        "status": "success",
+        "duration_ms": 0,
+        "documents_count": 5
+      },
+      "transcript": {
+        "status": "success",
+        "duration_ms": 0,
+        "documents_count": 1
+      },
+      "code": {
+        "status": "failed",
+        "error": "'charmap' codec can't encode characters in position 0-1: character maps to <undefined>"
+      },
+      "pdf": {
+        "status": "failed",
+        "error": "PDF file not found or upload failed"
+      }
+    }
+  },
+  "summary": {
+    "total_documents_processed": 27,
+    "total_documents_valid": 27,
+    "total_documents_rejected": 0
+  },
+  "documents": [
+    {
+      "document_id": "csv-1",
+      "content": "Product: Laptop VinAI Pro 14, Category: Electronics, Price: 1200.0 USD, Date: 2026-01-15, Seller: S001",
+      "source_type": "CSV",
+      "author": "S001",
+      "timestamp": "2026-01-15T00:00:00Z",
+      "source_metadata": {
+        "original_row": {
+          "id": "1",
+          "product_name": "Laptop VinAI Pro 14",
+          "category": "Electronics",
+          "price": "$1200",
+          "currency": "USD",
+          "date_of_sale": "2026-01-15",
+          "seller_id": "S001",
+          "stock_quantity": "45.0"
+        },
+        "normalized_values": {
+          "price": 1200.0,
+          "date_of_sale": "2026-01-15",
+          "stock_quantity": 45
+        },
+        "csv_info": {
+          "row_number": 2,
+          "column_count": 8,
+          "columns": [
+            "id",
+            "product_name",
+            "category",
+            "price",
+            "currency",
+            "date_of_sale",
+            "seller_id",
+            "stock_quantity"
+          ]
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.221311Z",
+        "processing_duration_ms": 0,
+        "source_file": "sales_records.csv",
+        "source_file_hash": "sha256:csv_hash",
+        "schema_version": "v1",
+        "validation_status": "passed",
+        "duplicate_of": null
+      },
+      "data_quality_flags": []
+    },
+    {
+      "document_id": "csv-2",
+      "content": "Product: Wireless Mouse, Category: Electronics, Price: 250000.0 VND, Date: 2026-01-15, Seller: S002",
+      "source_type": "CSV",
+      "author": "S002",
+      "timestamp": "2026-01-15T00:00:00Z",
+      "source_metadata": {
+        "original_row": {
+          "id": "2",
+          "product_name": "Wireless Mouse",
+          "category": "Electronics",
+          "price": "250000",
+          "currency": "VND",
+          "date_of_sale": "15/01/2026",
+          "seller_id": "S002",
+          "stock_quantity": "120.0"
+        },
+        "normalized_values": {
+          "price": 250000.0,
+          "date_of_sale": "2026-01-15",
+          "stock_quantity": 120
+        },
+        "csv_info": {
+          "row_number": 3,
+          "column_count": 8,
+          "columns": [
+            "id",
+            "product_name",
+            "category",
+            "price",
+            "currency",
+            "date_of_sale",
+            "seller_id",
+            "stock_quantity"
+          ]
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.226715Z",
+        "processing_duration_ms": 0,
+        "source_file": "sales_records.csv",
+        "source_file_hash": "sha256:csv_hash",
+        "schema_version": "v1",
+        "validation_status": "passed",
+        "duplicate_of": null
+      },
+      "data_quality_flags": []
+    },
+    {
+      "document_id": "csv-3",
+      "content": "Product: USB-C Hub 7-Port, Category: Electronics, Date: 2026-01-16, Seller: S003",
+      "source_type": "CSV",
+      "author": "S003",
+      "timestamp": "2026-01-16T00:00:00Z",
+      "source_metadata": {
+        "original_row": {
+          "id": "3",
+          "product_name": "USB-C Hub 7-Port",
+          "category": "Electronics",
+          "price": "nan",
+          "currency": "USD",
+          "date_of_sale": "January 16th 2026",
+          "seller_id": "S003",
+          "stock_quantity": "0.0"
+        },
+        "normalized_values": {
+          "price": null,
+          "date_of_sale": "2026-01-16",
+          "stock_quantity": 0
+        },
+        "csv_info": {
+          "row_number": 4,
+          "column_count": 8,
+          "columns": [
+            "id",
+            "product_name",
+            "category",
+            "price",
+            "currency",
+            "date_of_sale",
+            "seller_id",
+            "stock_quantity"
+          ]
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.226715Z",
+        "processing_duration_ms": 0,
+        "source_file": "sales_records.csv",
+        "source_file_hash": "sha256:csv_hash",
+        "schema_version": "v1",
+        "validation_status": "partial",
+        "duplicate_of": null
+      },
+      "data_quality_flags": [
+        "invalid_price_format"
+      ]
+    },
+    {
+      "document_id": "csv-4",
+      "content": "Product: Mechanical Keyboard, Category: Electronics, Price: 1500000.0 VND, Date: 2026-01-17, Seller: S004",
+      "source_type": "CSV",
+      "author": "S004",
+      "timestamp": "2026-01-17T00:00:00Z",
+      "source_metadata": {
+        "original_row": {
+          "id": "4",
+          "product_name": "Mechanical Keyboard",
+          "category": "Electronics",
+          "price": "1500000",
+          "currency": "VND",
+          "date_of_sale": "2026-01-17",
+          "seller_id": "S004",
+          "stock_quantity": "30.0"
+        },
+        "normalized_values": {
+          "price": 1500000.0,
+          "date_of_sale": "2026-01-17",
+          "stock_quantity": 30
+        },
+        "csv_info": {
+          "row_number": 5,
+          "column_count": 8,
+          "columns": [
+            "id",
+            "product_name",
+            "category",
+            "price",
+            "currency",
+            "date_of_sale",
+            "seller_id",
+            "stock_quantity"
+          ]
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.226715Z",
+        "processing_duration_ms": 0,
+        "source_file": "sales_records.csv",
+        "source_file_hash": "sha256:csv_hash",
+        "schema_version": "v1",
+        "validation_status": "passed",
+        "duplicate_of": null
+      },
+      "data_quality_flags": []
+    },
+    {
+      "document_id": "csv-1",
+      "content": "Product: Laptop VinAI Pro 14, Category: Electronics, Price: 1200.0 USD, Date: 2026-01-15, Seller: S001",
+      "source_type": "CSV",
+      "author": "S001",
+      "timestamp": "2026-01-15T00:00:00Z",
+      "source_metadata": {
+        "original_row": {
+          "id": "1",
+          "product_name": "Laptop VinAI Pro 14",
+          "category": "Electronics",
+          "price": "1200",
+          "currency": "USD",
+          "date_of_sale": "2026-01-15",
+          "seller_id": "S001",
+          "stock_quantity": "45.0"
+        },
+        "normalized_values": {
+          "price": 1200.0,
+          "date_of_sale": "2026-01-15",
+          "stock_quantity": 45
+        },
+        "csv_info": {
+          "row_number": 6,
+          "column_count": 8,
+          "columns": [
+            "id",
+            "product_name",
+            "category",
+            "price",
+            "currency",
+            "date_of_sale",
+            "seller_id",
+            "stock_quantity"
+          ]
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.226715Z",
+        "processing_duration_ms": 0,
+        "source_file": "sales_records.csv",
+        "source_file_hash": "sha256:csv_hash",
+        "schema_version": "v1",
+        "validation_status": "partial",
+        "duplicate_of": "csv-1"
+      },
+      "data_quality_flags": [
+        "duplicate_record"
+      ]
+    },
+    {
+      "document_id": "csv-5",
+      "content": "Product: HDMI Cable 2m, Category: Accessories, Price: 5.0 USD, Date: 2026-01-17, Seller: S005",
+      "source_type": "CSV",
+      "author": "S005",
+      "timestamp": "2026-01-17T00:00:00Z",
+      "source_metadata": {
+        "original_row": {
+          "id": "5",
+          "product_name": "HDMI Cable 2m",
+          "category": "Accessories",
+          "price": "five dollars",
+          "currency": "USD",
+          "date_of_sale": "17-01-2026",
+          "seller_id": "S005",
+          "stock_quantity": "200.0"
+        },
+        "normalized_values": {
+          "price": 5.0,
+          "date_of_sale": "2026-01-17",
+          "stock_quantity": 200
+        },
+        "csv_info": {
+          "row_number": 7,
+          "column_count": 8,
+          "columns": [
+            "id",
+            "product_name",
+            "category",
+            "price",
+            "currency",
+            "date_of_sale",
+            "seller_id",
+            "stock_quantity"
+          ]
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.226715Z",
+        "processing_duration_ms": 0,
+        "source_file": "sales_records.csv",
+        "source_file_hash": "sha256:csv_hash",
+        "schema_version": "v1",
+        "validation_status": "passed",
+        "duplicate_of": null
+      },
+      "data_quality_flags": []
+    },
+    {
+      "document_id": "csv-6",
+      "content": "Product: Monitor 27 inch 4K, Category: Electronics, Price: 8500000.0 VND, Date: 2026-01-18, Seller: S001",
+      "source_type": "CSV",
+      "author": "S001",
+      "timestamp": "2026-01-18T00:00:00Z",
+      "source_metadata": {
+        "original_row": {
+          "id": "6",
+          "product_name": "Monitor 27 inch 4K",
+          "category": "Electronics",
+          "price": "8500000",
+          "currency": "VND",
+          "date_of_sale": "2026-01-18",
+          "seller_id": "S001",
+          "stock_quantity": "12.0"
+        },
+        "normalized_values": {
+          "price": 8500000.0,
+          "date_of_sale": "2026-01-18",
+          "stock_quantity": 12
+        },
+        "csv_info": {
+          "row_number": 8,
+          "column_count": 8,
+          "columns": [
+            "id",
+            "product_name",
+            "category",
+            "price",
+            "currency",
+            "date_of_sale",
+            "seller_id",
+            "stock_quantity"
+          ]
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.226715Z",
+        "processing_duration_ms": 0,
+        "source_file": "sales_records.csv",
+        "source_file_hash": "sha256:csv_hash",
+        "schema_version": "v1",
+        "validation_status": "passed",
+        "duplicate_of": null
+      },
+      "data_quality_flags": []
+    },
+    {
+      "document_id": "csv-7",
+      "content": "Product: Webcam HD 1080p, Category: Electronics, Date: 2026-01-19, Seller: S002",
+      "source_type": "CSV",
+      "author": "S002",
+      "timestamp": "2026-01-19T00:00:00Z",
+      "source_metadata": {
+        "original_row": {
+          "id": "7",
+          "product_name": "Webcam HD 1080p",
+          "category": "Electronics",
+          "price": "-350000",
+          "currency": "VND",
+          "date_of_sale": "2026/01/19",
+          "seller_id": "S002",
+          "stock_quantity": "55.0"
+        },
+        "normalized_values": {
+          "price": null,
+          "date_of_sale": "2026-01-19",
+          "stock_quantity": 55
+        },
+        "csv_info": {
+          "row_number": 9,
+          "column_count": 8,
+          "columns": [
+            "id",
+            "product_name",
+            "category",
+            "price",
+            "currency",
+            "date_of_sale",
+            "seller_id",
+            "stock_quantity"
+          ]
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.226715Z",
+        "processing_duration_ms": 0,
+        "source_file": "sales_records.csv",
+        "source_file_hash": "sha256:csv_hash",
+        "schema_version": "v1",
+        "validation_status": "partial",
+        "duplicate_of": null
+      },
+      "data_quality_flags": [
+        "invalid_price_format"
+      ]
+    },
+    {
+      "document_id": "csv-8",
+      "content": "Product: SSD 1TB NVMe, Category: Electronics, Price: 2200000.0 VND, Date: 2026-01-19, Seller: S003",
+      "source_type": "CSV",
+      "author": "S003",
+      "timestamp": "2026-01-19T00:00:00Z",
+      "source_metadata": {
+        "original_row": {
+          "id": "8",
+          "product_name": "SSD 1TB NVMe",
+          "category": "Electronics",
+          "price": "2200000",
+          "currency": "VND",
+          "date_of_sale": "19 Jan 2026",
+          "seller_id": "S003",
+          "stock_quantity": "88.0"
+        },
+        "normalized_values": {
+          "price": 2200000.0,
+          "date_of_sale": "2026-01-19",
+          "stock_quantity": 88
+        },
+        "csv_info": {
+          "row_number": 10,
+          "column_count": 8,
+          "columns": [
+            "id",
+            "product_name",
+            "category",
+            "price",
+            "currency",
+            "date_of_sale",
+            "seller_id",
+            "stock_quantity"
+          ]
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.226715Z",
+        "processing_duration_ms": 0,
+        "source_file": "sales_records.csv",
+        "source_file_hash": "sha256:csv_hash",
+        "schema_version": "v1",
+        "validation_status": "passed",
+        "duplicate_of": null
+      },
+      "data_quality_flags": []
+    },
+    {
+      "document_id": "csv-9",
+      "content": "Product: Laptop Stand, Category: Accessories, Price: 450000.0 VND, Date: 2026-01-20, Seller: S004",
+      "source_type": "CSV",
+      "author": "S004",
+      "timestamp": "2026-01-20T00:00:00Z",
+      "source_metadata": {
+        "original_row": {
+          "id": "9",
+          "product_name": "Laptop Stand",
+          "category": "Accessories",
+          "price": "450000",
+          "currency": "VND",
+          "date_of_sale": "2026-01-20",
+          "seller_id": "S004",
+          "stock_quantity": "nan"
+        },
+        "normalized_values": {
+          "price": 450000.0,
+          "date_of_sale": "2026-01-20",
+          "stock_quantity": null
+        },
+        "csv_info": {
+          "row_number": 11,
+          "column_count": 8,
+          "columns": [
+            "id",
+            "product_name",
+            "category",
+            "price",
+            "currency",
+            "date_of_sale",
+            "seller_id",
+            "stock_quantity"
+          ]
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.226715Z",
+        "processing_duration_ms": 0,
+        "source_file": "sales_records.csv",
+        "source_file_hash": "sha256:csv_hash",
+        "schema_version": "v1",
+        "validation_status": "partial",
+        "duplicate_of": null
+      },
+      "data_quality_flags": [
+        "missing_value"
+      ]
+    },
+    {
+      "document_id": "csv-10",
+      "content": "Product: Bluetooth Speaker, Category: Electronics, Price: 850000.0 VND, Date: 2026-01-20, Seller: S005",
+      "source_type": "CSV",
+      "author": "S005",
+      "timestamp": "2026-01-20T00:00:00Z",
+      "source_metadata": {
+        "original_row": {
+          "id": "10",
+          "product_name": "Bluetooth Speaker",
+          "category": "Electronics",
+          "price": "850000",
+          "currency": "VND",
+          "date_of_sale": "2026-01-20",
+          "seller_id": "S005",
+          "stock_quantity": "40.0"
+        },
+        "normalized_values": {
+          "price": 850000.0,
+          "date_of_sale": "2026-01-20",
+          "stock_quantity": 40
+        },
+        "csv_info": {
+          "row_number": 12,
+          "column_count": 8,
+          "columns": [
+            "id",
+            "product_name",
+            "category",
+            "price",
+            "currency",
+            "date_of_sale",
+            "seller_id",
+            "stock_quantity"
+          ]
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.226715Z",
+        "processing_duration_ms": 0,
+        "source_file": "sales_records.csv",
+        "source_file_hash": "sha256:csv_hash",
+        "schema_version": "v1",
+        "validation_status": "passed",
+        "duplicate_of": null
+      },
+      "data_quality_flags": []
+    },
+    {
+      "document_id": "csv-11",
+      "content": "Product: Gaming Headset, Category: Electronics, Price: 1200000.0 VND, Date: 2026-01-21, Seller: S001",
+      "source_type": "CSV",
+      "author": "S001",
+      "timestamp": "2026-01-21T00:00:00Z",
+      "source_metadata": {
+        "original_row": {
+          "id": "11",
+          "product_name": "Gaming Headset",
+          "category": "Electronics",
+          "price": "1200000",
+          "currency": "VND",
+          "date_of_sale": "2026-01-21",
+          "seller_id": "S001",
+          "stock_quantity": "25.0"
+        },
+        "normalized_values": {
+          "price": 1200000.0,
+          "date_of_sale": "2026-01-21",
+          "stock_quantity": 25
+        },
+        "csv_info": {
+          "row_number": 13,
+          "column_count": 8,
+          "columns": [
+            "id",
+            "product_name",
+            "category",
+            "price",
+            "currency",
+            "date_of_sale",
+            "seller_id",
+            "stock_quantity"
+          ]
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.226715Z",
+        "processing_duration_ms": 0,
+        "source_file": "sales_records.csv",
+        "source_file_hash": "sha256:csv_hash",
+        "schema_version": "v1",
+        "validation_status": "passed",
+        "duplicate_of": null
+      },
+      "data_quality_flags": []
+    },
+    {
+      "document_id": "csv-12",
+      "content": "Product: Power Bank 20000mAh, Category: Accessories, Price: 600000.0 VND, Date: 2026-01-21, Seller: S002",
+      "source_type": "CSV",
+      "author": "S002",
+      "timestamp": "2026-01-21T00:00:00Z",
+      "source_metadata": {
+        "original_row": {
+          "id": "12",
+          "product_name": "Power Bank 20000mAh",
+          "category": "Accessories",
+          "price": "600000",
+          "currency": "VND",
+          "date_of_sale": "21/01/2026",
+          "seller_id": "S002",
+          "stock_quantity": "70.0"
+        },
+        "normalized_values": {
+          "price": 600000.0,
+          "date_of_sale": "2026-01-21",
+          "stock_quantity": 70
+        },
+        "csv_info": {
+          "row_number": 14,
+          "column_count": 8,
+          "columns": [
+            "id",
+            "product_name",
+            "category",
+            "price",
+            "currency",
+            "date_of_sale",
+            "seller_id",
+            "stock_quantity"
+          ]
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.226715Z",
+        "processing_duration_ms": 0,
+        "source_file": "sales_records.csv",
+        "source_file_hash": "sha256:csv_hash",
+        "schema_version": "v1",
+        "validation_status": "passed",
+        "duplicate_of": null
+      },
+      "data_quality_flags": []
+    },
+    {
+      "document_id": "csv-13",
+      "content": "Product: Smart Watch VinHealth, Category: Wearables, Date: 2026-01-22, Seller: S003",
+      "source_type": "CSV",
+      "author": "S003",
+      "timestamp": "2026-01-22T00:00:00Z",
+      "source_metadata": {
+        "original_row": {
+          "id": "13",
+          "product_name": "Smart Watch VinHealth",
+          "category": "Wearables",
+          "price": "Liên hệ",
+          "currency": "VND",
+          "date_of_sale": "2026-01-22",
+          "seller_id": "S003",
+          "stock_quantity": "15.0"
+        },
+        "normalized_values": {
+          "price": null,
+          "date_of_sale": "2026-01-22",
+          "stock_quantity": 15
+        },
+        "csv_info": {
+          "row_number": 15,
+          "column_count": 8,
+          "columns": [
+            "id",
+            "product_name",
+            "category",
+            "price",
+            "currency",
+            "date_of_sale",
+            "seller_id",
+            "stock_quantity"
+          ]
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.226715Z",
+        "processing_duration_ms": 0,
+        "source_file": "sales_records.csv",
+        "source_file_hash": "sha256:csv_hash",
+        "schema_version": "v1",
+        "validation_status": "passed",
+        "duplicate_of": null
+      },
+      "data_quality_flags": []
+    },
+    {
+      "document_id": "csv-14",
+      "content": "Product: Phone Case Premium, Category: Accessories, Price: 150000.0 VND, Date: None, Seller: S004",
+      "source_type": "CSV",
+      "author": "S004",
+      "timestamp": null,
+      "source_metadata": {
+        "original_row": {
+          "id": "14",
+          "product_name": "Phone Case Premium",
+          "category": "Accessories",
+          "price": "150000",
+          "currency": "VND",
+          "date_of_sale": "January 22nd 2026",
+          "seller_id": "S004",
+          "stock_quantity": "300.0"
+        },
+        "normalized_values": {
+          "price": 150000.0,
+          "date_of_sale": null,
+          "stock_quantity": 300
+        },
+        "csv_info": {
+          "row_number": 16,
+          "column_count": 8,
+          "columns": [
+            "id",
+            "product_name",
+            "category",
+            "price",
+            "currency",
+            "date_of_sale",
+            "seller_id",
+            "stock_quantity"
+          ]
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.226715Z",
+        "processing_duration_ms": 0,
+        "source_file": "sales_records.csv",
+        "source_file_hash": "sha256:csv_hash",
+        "schema_version": "v1",
+        "validation_status": "partial",
+        "duplicate_of": null
+      },
+      "data_quality_flags": [
+        "date_format_inconsistent"
+      ]
+    },
+    {
+      "document_id": "csv-15",
+      "content": "Product: Laptop VinAI Pro 14, Category: Electronics, Price: 1200.0 USD, Date: 2026-01-22, Seller: S001",
+      "source_type": "CSV",
+      "author": "S001",
+      "timestamp": "2026-01-22T00:00:00Z",
+      "source_metadata": {
+        "original_row": {
+          "id": "15",
+          "product_name": "Laptop VinAI Pro 14",
+          "category": "Electronics",
+          "price": "1200",
+          "currency": "USD",
+          "date_of_sale": "2026-01-22",
+          "seller_id": "S001",
+          "stock_quantity": "45.0"
+        },
+        "normalized_values": {
+          "price": 1200.0,
+          "date_of_sale": "2026-01-22",
+          "stock_quantity": 45
+        },
+        "csv_info": {
+          "row_number": 17,
+          "column_count": 8,
+          "columns": [
+            "id",
+            "product_name",
+            "category",
+            "price",
+            "currency",
+            "date_of_sale",
+            "seller_id",
+            "stock_quantity"
+          ]
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.226715Z",
+        "processing_duration_ms": 0,
+        "source_file": "sales_records.csv",
+        "source_file_hash": "sha256:csv_hash",
+        "schema_version": "v1",
+        "validation_status": "passed",
+        "duplicate_of": null
+      },
+      "data_quality_flags": []
+    },
+    {
+      "document_id": "csv-16",
+      "content": "Product: Tablet 10 inch, Category: Electronics, Price: 5500000.0 VND, Date: 2026-01-23, Seller: S005",
+      "source_type": "CSV",
+      "author": "S005",
+      "timestamp": "2026-01-23T00:00:00Z",
+      "source_metadata": {
+        "original_row": {
+          "id": "16",
+          "product_name": "Tablet 10 inch",
+          "category": "Electronics",
+          "price": "5500000",
+          "currency": "VND",
+          "date_of_sale": "2026-01-23",
+          "seller_id": "S005",
+          "stock_quantity": "20.0"
+        },
+        "normalized_values": {
+          "price": 5500000.0,
+          "date_of_sale": "2026-01-23",
+          "stock_quantity": 20
+        },
+        "csv_info": {
+          "row_number": 18,
+          "column_count": 8,
+          "columns": [
+            "id",
+            "product_name",
+            "category",
+            "price",
+            "currency",
+            "date_of_sale",
+            "seller_id",
+            "stock_quantity"
+          ]
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.226715Z",
+        "processing_duration_ms": 0,
+        "source_file": "sales_records.csv",
+        "source_file_hash": "sha256:csv_hash",
+        "schema_version": "v1",
+        "validation_status": "passed",
+        "duplicate_of": null
+      },
+      "data_quality_flags": []
+    },
+    {
+      "document_id": "csv-17",
+      "content": "Product: Earbuds TWS Pro, Category: Electronics, Price: 750000.0 VND, Date: 2026-01-23, Seller: S001",
+      "source_type": "CSV",
+      "author": "S001",
+      "timestamp": "2026-01-23T00:00:00Z",
+      "source_metadata": {
+        "original_row": {
+          "id": "17",
+          "product_name": "Earbuds TWS Pro",
+          "category": "Electronics",
+          "price": "750000",
+          "currency": "VND",
+          "date_of_sale": "23-01-2026",
+          "seller_id": "S001",
+          "stock_quantity": "60.0"
+        },
+        "normalized_values": {
+          "price": 750000.0,
+          "date_of_sale": "2026-01-23",
+          "stock_quantity": 60
+        },
+        "csv_info": {
+          "row_number": 19,
+          "column_count": 8,
+          "columns": [
+            "id",
+            "product_name",
+            "category",
+            "price",
+            "currency",
+            "date_of_sale",
+            "seller_id",
+            "stock_quantity"
+          ]
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.226715Z",
+        "processing_duration_ms": 0,
+        "source_file": "sales_records.csv",
+        "source_file_hash": "sha256:csv_hash",
+        "schema_version": "v1",
+        "validation_status": "passed",
+        "duplicate_of": null
+      },
+      "data_quality_flags": []
+    },
+    {
+      "document_id": "csv-18",
+      "content": "Product: Screen Protector, Category: Accessories, Price: 85000.0 VND, Date: 2026-01-24, Seller: S002",
+      "source_type": "CSV",
+      "author": "S002",
+      "timestamp": "2026-01-24T00:00:00Z",
+      "source_metadata": {
+        "original_row": {
+          "id": "18",
+          "product_name": "Screen Protector",
+          "category": "Accessories",
+          "price": "85000",
+          "currency": "VND",
+          "date_of_sale": "2026/01/24",
+          "seller_id": "S002",
+          "stock_quantity": "500.0"
+        },
+        "normalized_values": {
+          "price": 85000.0,
+          "date_of_sale": "2026-01-24",
+          "stock_quantity": 500
+        },
+        "csv_info": {
+          "row_number": 20,
+          "column_count": 8,
+          "columns": [
+            "id",
+            "product_name",
+            "category",
+            "price",
+            "currency",
+            "date_of_sale",
+            "seller_id",
+            "stock_quantity"
+          ]
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.226715Z",
+        "processing_duration_ms": 0,
+        "source_file": "sales_records.csv",
+        "source_file_hash": "sha256:csv_hash",
+        "schema_version": "v1",
+        "validation_status": "passed",
+        "duplicate_of": null
+      },
+      "data_quality_flags": []
+    },
+    {
+      "document_id": "csv-19",
+      "content": "Product: External HDD 2TB, Category: Electronics, Price: 1800000.0 VND, Date: 2026-01-24, Seller: S003",
+      "source_type": "CSV",
+      "author": "S003",
+      "timestamp": "2026-01-24T00:00:00Z",
+      "source_metadata": {
+        "original_row": {
+          "id": "19",
+          "product_name": "External HDD 2TB",
+          "category": "Electronics",
+          "price": "1800000",
+          "currency": "VND",
+          "date_of_sale": "24 Jan 2026",
+          "seller_id": "S003",
+          "stock_quantity": "35.0"
+        },
+        "normalized_values": {
+          "price": 1800000.0,
+          "date_of_sale": "2026-01-24",
+          "stock_quantity": 35
+        },
+        "csv_info": {
+          "row_number": 21,
+          "column_count": 8,
+          "columns": [
+            "id",
+            "product_name",
+            "category",
+            "price",
+            "currency",
+            "date_of_sale",
+            "seller_id",
+            "stock_quantity"
+          ]
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.226715Z",
+        "processing_duration_ms": 0,
+        "source_file": "sales_records.csv",
+        "source_file_hash": "sha256:csv_hash",
+        "schema_version": "v1",
+        "validation_status": "passed",
+        "duplicate_of": null
+      },
+      "data_quality_flags": []
+    },
+    {
+      "document_id": "csv-20",
+      "content": "Product: RAM DDR5 16GB, Category: Electronics, Date: 2026-01-25, Seller: S004",
+      "source_type": "CSV",
+      "author": "S004",
+      "timestamp": "2026-01-25T00:00:00Z",
+      "source_metadata": {
+        "original_row": {
+          "id": "20",
+          "product_name": "RAM DDR5 16GB",
+          "category": "Electronics",
+          "price": "nan",
+          "currency": "VND",
+          "date_of_sale": "2026-01-25",
+          "seller_id": "S004",
+          "stock_quantity": "42.0"
+        },
+        "normalized_values": {
+          "price": null,
+          "date_of_sale": "2026-01-25",
+          "stock_quantity": 42
+        },
+        "csv_info": {
+          "row_number": 22,
+          "column_count": 8,
+          "columns": [
+            "id",
+            "product_name",
+            "category",
+            "price",
+            "currency",
+            "date_of_sale",
+            "seller_id",
+            "stock_quantity"
+          ]
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.226715Z",
+        "processing_duration_ms": 0,
+        "source_file": "sales_records.csv",
+        "source_file_hash": "sha256:csv_hash",
+        "schema_version": "v1",
+        "validation_status": "partial",
+        "duplicate_of": null
+      },
+      "data_quality_flags": [
+        "invalid_price_format"
+      ]
+    },
+    {
+      "document_id": "html-SP-001",
+      "content": "Product: VinAI Laptop Pro 14\" (SP-001), Category: Laptop, Price: 28500000.0 VND, Stock: 45",
+      "source_type": "HTML",
+      "author": "VinShop",
+      "timestamp": null,
+      "source_metadata": {
+        "original_values": {
+          "product_code": "SP-001",
+          "product_name": "VinAI Laptop Pro 14\"",
+          "category": "Laptop",
+          "price_text": "28,500,000 VND",
+          "stock_text": "45",
+          "rating_text": "4.8/5"
+        },
+        "parsed_values": {
+          "price": 28500000.0,
+          "currency": "VND",
+          "stock": 45,
+          "rating": "4.8/5"
+        },
+        "html_info": {
+          "table_id": "main-catalog",
+          "table_name": "product-grid",
+          "row_number": 1,
+          "extraction_method": "beautifulsoup4"
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.231197Z",
+        "processing_duration_ms": 0,
+        "source_file": "product_catalog.html",
+        "source_file_hash": "sha256:html_hash",
+        "schema_version": "v1",
+        "validation_status": "passed",
+        "duplicate_of": null
+      },
+      "data_quality_flags": []
+    },
+    {
+      "document_id": "html-SP-002",
+      "content": "Product: Chuột không dây ErgoMax (SP-002), Category: Phụ kiện, Stock: 0",
+      "source_type": "HTML",
+      "author": "VinShop",
+      "timestamp": null,
+      "source_metadata": {
+        "original_values": {
+          "product_code": "SP-002",
+          "product_name": "Chuột không dây ErgoMax",
+          "category": "Phụ kiện",
+          "price_text": "N/A",
+          "stock_text": "0",
+          "rating_text": "4.2/5"
+        },
+        "parsed_values": {
+          "price": null,
+          "currency": "VND",
+          "stock": 0,
+          "rating": "4.2/5"
+        },
+        "html_info": {
+          "table_id": "main-catalog",
+          "table_name": "product-grid",
+          "row_number": 2,
+          "extraction_method": "beautifulsoup4"
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.231197Z",
+        "processing_duration_ms": 0,
+        "source_file": "product_catalog.html",
+        "source_file_hash": "sha256:html_hash",
+        "schema_version": "v1",
+        "validation_status": "partial",
+        "duplicate_of": null
+      },
+      "data_quality_flags": [
+        "invalid_price_format"
+      ]
+    },
+    {
+      "document_id": "html-SP-003",
+      "content": "Product: Màn hình 4K 27\" ProDisplay (SP-003), Category: Màn hình, Stock: 12",
+      "source_type": "HTML",
+      "author": "VinShop",
+      "timestamp": null,
+      "source_metadata": {
+        "original_values": {
+          "product_code": "SP-003",
+          "product_name": "Màn hình 4K 27\" ProDisplay",
+          "category": "Màn hình",
+          "price_text": "Liên hệ",
+          "stock_text": "12",
+          "rating_text": "4.9/5"
+        },
+        "parsed_values": {
+          "price": null,
+          "currency": "VND",
+          "stock": 12,
+          "rating": "4.9/5"
+        },
+        "html_info": {
+          "table_id": "main-catalog",
+          "table_name": "product-grid",
+          "row_number": 3,
+          "extraction_method": "beautifulsoup4"
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.231197Z",
+        "processing_duration_ms": 0,
+        "source_file": "product_catalog.html",
+        "source_file_hash": "sha256:html_hash",
+        "schema_version": "v1",
+        "validation_status": "partial",
+        "duplicate_of": null
+      },
+      "data_quality_flags": [
+        "invalid_price_format"
+      ]
+    },
+    {
+      "document_id": "html-SP-004",
+      "content": "Product: Bàn phím cơ Blue Switch (SP-004), Category: Phụ kiện, Price: 1850000.0 VND, Stock: -5",
+      "source_type": "HTML",
+      "author": "VinShop",
+      "timestamp": null,
+      "source_metadata": {
+        "original_values": {
+          "product_code": "SP-004",
+          "product_name": "Bàn phím cơ Blue Switch",
+          "category": "Phụ kiện",
+          "price_text": "1,850,000 VND",
+          "stock_text": "-5",
+          "rating_text": "4.5/5"
+        },
+        "parsed_values": {
+          "price": 1850000.0,
+          "currency": "VND",
+          "stock": -5,
+          "rating": "4.5/5"
+        },
+        "html_info": {
+          "table_id": "main-catalog",
+          "table_name": "product-grid",
+          "row_number": 4,
+          "extraction_method": "beautifulsoup4"
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.231197Z",
+        "processing_duration_ms": 0,
+        "source_file": "product_catalog.html",
+        "source_file_hash": "sha256:html_hash",
+        "schema_version": "v1",
+        "validation_status": "partial",
+        "duplicate_of": null
+      },
+      "data_quality_flags": [
+        "out_of_range_value"
+      ]
+    },
+    {
+      "document_id": "html-SP-005",
+      "content": "Product: Tai nghe chống ồn AI-Ear Pro (SP-005), Category: Âm thanh, Price: 3200000.0 VND, Stock: 28",
+      "source_type": "HTML",
+      "author": "VinShop",
+      "timestamp": null,
+      "source_metadata": {
+        "original_values": {
+          "product_code": "SP-005",
+          "product_name": "Tai nghe chống ồn AI-Ear Pro",
+          "category": "Âm thanh",
+          "price_text": "3,200,000 VND",
+          "stock_text": "28",
+          "rating_text": "không có đánh giá"
+        },
+        "parsed_values": {
+          "price": 3200000.0,
+          "currency": "VND",
+          "stock": 28,
+          "rating": "không có đánh giá"
+        },
+        "html_info": {
+          "table_id": "main-catalog",
+          "table_name": "product-grid",
+          "row_number": 5,
+          "extraction_method": "beautifulsoup4"
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.231197Z",
+        "processing_duration_ms": 0,
+        "source_file": "product_catalog.html",
+        "source_file_hash": "sha256:html_hash",
+        "schema_version": "v1",
+        "validation_status": "partial",
+        "duplicate_of": null
+      },
+      "data_quality_flags": [
+        "missing_value"
+      ]
+    },
+    {
+      "document_id": "transcript-001",
+      "content": "Chào mừng các bạn đến với buổi học hôm nay về Data Pipeline Engineering. Hôm nay chúng ta sẽ nói về việc xử lý dữ liệu phi cấu trúc, ví dụ như PDF và Video. Một vấn đề lớn là Semantic Drift. Các bạn có biết không? Dạ em có nghe qua, nhưng nó có liên quan gì đến Zillow không ạ? Có chứ! Zillow là ví dụ điển hình của việc mô hình bị hỏng do dữ liệu đầu vào thay đổi. Đừng để mô hình của bạn trở thành 'rác vào, rác ra'. À, một lưu ý nhỏ cho bài tập: Giá của sản phẩm VinAI Pro là năm trăm nghìn VND. Nhớ nhé, 500,000 VND. Bây giờ chúng ta hãy bắt đầu thực hành.",
+      "source_type": "TRANSCRIPT",
+      "author": "Multiple Speakers",
+      "timestamp": null,
+      "source_metadata": {
+        "original_text": "[00:00:00] [Speaker 1]: Chào mừng các bạn đến với buổi học hôm nay về Data Pipeline Engineering.\n[00:00:05] [Music starts]\n[00:00:10] [Speaker 1]: Hôm nay chúng ta sẽ nói về việc xử lý dữ liệu phi cấu trúc, ví dụ như PDF và Video.\n[00:00:15] [Speaker 1]: Một vấn đề lớn là Semantic Drift. Các bạn có biết không?\n[00:00:20] [Speaker 2]: Dạ em có nghe qua, nhưng [inaudible] nó có liên quan gì đến Zillow không ạ?\n[00:00:25] [Speaker 1]: Có chứ! Zillow là ví dụ điển hình của việc mô hình bị hỏng do dữ liệu đầu vào thay đổi.\n[00:00:30] [Speaker 1]: [Laughter] Đừng để mô hình của bạn trở thành 'rác vào, rác ra'.\n[00:00:35] [Speaker 1]: À, một lưu ý nhỏ cho bài tập: Giá của sản phẩm VinAI Pro là năm trăm nghìn VND. Nhớ nhé, 500,000 VND.\n[00:00:40] [Speaker 1]: [Music ends]\n[00:00:45] [Speaker 1]: Bây giờ chúng ta hãy bắt đầu thực hành.\n",
+        "original_lines": 11,
+        "cleaned_text": "Chào mừng các bạn đến với buổi học hôm nay về Data Pipeline Engineering. Hôm nay chúng ta sẽ nói về việc xử lý dữ liệu phi cấu trúc, ví dụ như PDF và Video. Một vấn đề lớn là Semantic Drift. Các bạn có biết không? Dạ em có nghe qua, nhưng nó có liên quan gì đến Zillow không ạ? Có chứ! Zillow là ví dụ điển hình của việc mô hình bị hỏng do dữ liệu đầu vào thay đổi. Đừng để mô hình của bạn trở thành 'rác vào, rác ra'. À, một lưu ý nhỏ cho bài tập: Giá của sản phẩm VinAI Pro là năm trăm nghìn VND. Nhớ nhé, 500,000 VND. Bây giờ chúng ta hãy bắt đầu thực hành.",
+        "cleaned_lines": 1,
+        "speakers": [
+          "[Speaker 1]",
+          "[Speaker 2]"
+        ],
+        "language": "Vietnamese",
+        "primary_language": "vi",
+        "noise_removed": {
+          "timestamps": 10,
+          "sound_effects": [
+            "[Music starts]",
+            "[Music ends]"
+          ],
+          "ambiguous_audio": [
+            "[inaudible]",
+            "[Laughter]"
+          ],
+          "total_tokens_removed": 5
+        },
+        "extracted_data": {
+          "prices_mentioned": [
+            {
+              "original_text": "năm trăm nghìn VND",
+              "parsed_value": 500000,
+              "currency": "VND",
+              "product": "VinAI Pro",
+              "confidence": 0.9,
+              "extraction_method": "vietnamese_numeral_parsing"
+            }
+          ]
+        },
+        "quality_metrics": {
+          "compression_ratio": 0.67,
+          "information_retention": 0.95
+        }
+      },
+      "ingestion_metadata": {
+        "ingestion_timestamp": "2026-04-24T11:02:26.231197Z",
+        "processing_duration_ms": 0,
+        "source_file": "demo_transcript.txt",
+        "source_file_hash": "sha256:transcript_hash",
+        "schema_version": "v1",
+        "validation_status": "passed",
+        "duplicate_of": null
+      },
+      "data_quality_flags": [
+        "noise_detected",
+        "vietnamese_numeral_detected"
+      ]
+    }
+  ]
+}
