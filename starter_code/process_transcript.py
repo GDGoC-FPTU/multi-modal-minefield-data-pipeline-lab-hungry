@@ -109,6 +109,7 @@ def clean_transcript(file_path):
             'extracted_data': {
                 'prices_mentioned': extracted_prices
             },
+            'detected_price_vnd': viet_price,
             'quality_metrics': {
                 'compression_ratio': round(len(cleaned_text) / len(original_text), 2),
                 'information_retention': 0.95
