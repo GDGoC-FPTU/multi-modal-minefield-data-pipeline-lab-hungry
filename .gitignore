@@ -3,3 +3,4 @@ pycache/
 .env
 .env.local
 __pycache__/
+venv/
