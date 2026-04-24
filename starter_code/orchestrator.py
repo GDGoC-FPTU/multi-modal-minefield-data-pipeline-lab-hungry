@@ -21,6 +21,20 @@ from quality_check import run_quality_gate
 # ==========================================
 # Task: Orchestrate the ingestion pipeline and handle errors/SLA.
 
+def process_and_store_document(doc_dict, final_kb, rejected_docs):
+    try:
+        doc_obj = UnifiedDocument(**doc_dict)
+        doc_record = doc_obj.to_record()
+        if 'duplicate_record' in doc_record.get('data_quality_flags', []):
+            rejected_docs.append(doc_record)
+        elif run_quality_gate(doc_record):
+            final_kb.append(doc_record)
+        else:
+            rejected_docs.append(doc_record)
+    except Exception as e:
+        doc_dict['validation_error'] = str(e)
+        rejected_docs.append(doc_dict)
+
 def main():
     start_time = time.time()
     final_kb = []
@@ -55,10 +69,7 @@ def main():
         print(f"[OK] CSV: {len(csv_docs)} documents extracted in {csv_duration}ms")
 
         for doc in csv_docs:
-            if run_quality_gate(doc):
-                final_kb.append(doc)
-            else:
-                rejected_docs.append(doc)
+            process_and_store_document(doc, final_kb, rejected_docs)
     except Exception as e:
         print(f"[FAIL] CSV processing failed: {e}")
         processing_stats['csv'] = {'status': 'failed', 'error': str(e)}
@@ -77,10 +88,7 @@ def main():
         print(f"[OK] HTML: {len(html_docs)} documents extracted in {html_duration}ms")
 
         for doc in html_docs:
-            if run_quality_gate(doc):
-                final_kb.append(doc)
-            else:
-                rejected_docs.append(doc)
+            process_and_store_document(doc, final_kb, rejected_docs)
     except Exception as e:
         print(f"[FAIL] HTML processing failed: {e}")
         processing_stats['html'] = {'status': 'failed', 'error': str(e)}
@@ -98,10 +106,7 @@ def main():
         }
         print(f"[OK] Transcript: 1 document extracted in {trans_duration}ms")
 
-        if run_quality_gate(trans_doc):
-            final_kb.append(trans_doc)
-        else:
-            rejected_docs.append(trans_doc)
+        process_and_store_document(trans_doc, final_kb, rejected_docs)
     except Exception as e:
         print(f"[FAIL] Transcript processing failed: {e}")
         processing_stats['transcript'] = {'status': 'failed', 'error': str(e)}
@@ -119,10 +124,7 @@ def main():
         }
         print(f"[OK] Code: 1 document extracted in {code_duration}ms")
 
-        if run_quality_gate(code_doc):
-            final_kb.append(code_doc)
-        else:
-            rejected_docs.append(code_doc)
+        process_and_store_document(code_doc, final_kb, rejected_docs)
     except Exception as e:
         print(f"[FAIL] Code processing failed: {e}")
         processing_stats['code'] = {'status': 'failed', 'error': str(e)}
@@ -141,10 +143,7 @@ def main():
             }
             print(f"[OK] PDF: 1 document extracted in {pdf_duration}ms")
 
-            if run_quality_gate(pdf_doc):
-                final_kb.append(pdf_doc)
-            else:
-                rejected_docs.append(pdf_doc)
+            process_and_store_document(pdf_doc, final_kb, rejected_docs)
         else:
             processing_stats['pdf'] = {
                 'status': 'failed',
@@ -178,7 +177,7 @@ def main():
     # Save to file
     try:
         with open(output_path, 'w', encoding='utf-8') as f:
-            json.dump(output, f, indent=2, ensure_ascii=False)
+            json.dump(final_kb, f, indent=2, ensure_ascii=False)
         print(f"\n[OK] Knowledge Base saved to: {output_path}")
     except Exception as e:
         print(f"[FAIL] Failed to save output: {e}")
